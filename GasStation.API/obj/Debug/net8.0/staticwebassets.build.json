@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "d4lI4hiIOH9et3YyHUJTSs5OKvNxyHcoTeszuVJI3vU=",
+  "Source": "GasStation.API",
+  "BasePath": "_content/GasStation.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

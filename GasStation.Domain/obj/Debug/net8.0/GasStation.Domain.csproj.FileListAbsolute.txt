@@ -1,0 +1,11 @@
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\bin\Debug\net8.0\GasStation.Domain.deps.json
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\bin\Debug\net8.0\GasStation.Domain.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\bin\Debug\net8.0\GasStation.Domain.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\GasStation.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\GasStation.Domain.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\GasStation.Domain.AssemblyInfo.cs
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\GasStation.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\GasStation.Domain.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\refint\GasStation.Domain.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\GasStation.Domain.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Domain\obj\Debug\net8.0\ref\GasStation.Domain.dll

@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\bin\Debug\net8.0\GasStation.Shared.deps.json
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\bin\Debug\net8.0\GasStation.Shared.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\bin\Debug\net8.0\GasStation.Shared.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\bin\Debug\net8.0\GasStation.Domain.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\bin\Debug\net8.0\GasStation.Domain.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.AssemblyInfo.cs
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStati.86912562.Up2Date
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\refint\GasStation.Shared.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\ref\GasStation.Shared.dll

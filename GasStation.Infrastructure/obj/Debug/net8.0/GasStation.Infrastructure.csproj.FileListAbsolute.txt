@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\bin\Debug\net8.0\GasStation.Infrastructure.deps.json
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\bin\Debug\net8.0\GasStation.Infrastructure.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\bin\Debug\net8.0\GasStation.Infrastructure.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\bin\Debug\net8.0\GasStation.Domain.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\bin\Debug\net8.0\GasStation.Domain.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.AssemblyInfo.cs
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStati.ECDF50C8.Up2Date
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\refint\GasStation.Infrastructure.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\ref\GasStation.Infrastructure.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\bin\Debug\net8.0\GasStation.Infrastructure.runtimeconfig.json
+C:\Users\Admin\source\repos\GasStation\GasStation.Infrastructure\obj\Debug\net8.0\GasStation.Infrastructure.genruntimeconfig.cache
