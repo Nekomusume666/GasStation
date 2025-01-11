@@ -11,6 +11,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Регистрация сервисов
 builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IAdministratorService, AdministratorService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IFuelService, FuelService>();
+builder.Services.AddScoped<IFuelTypeService, FuelTypeService>();
+builder.Services.AddScoped<IGasStationService, GasStationService>();
+builder.Services.AddScoped<INewsService, NewsService>();
+builder.Services.AddScoped<IPumpService, PumpService>();
+builder.Services.AddScoped<ISupplyService, SupplyService>();
+builder.Services.AddScoped<ITransactionsService, TransactionsService>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

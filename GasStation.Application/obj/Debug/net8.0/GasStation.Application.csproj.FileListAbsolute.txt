@@ -17,3 +17,4 @@ C:\Users\Admin\source\repos\GasStation\GasStation.Application\obj\Debug\net8.0\G
 C:\Users\Admin\source\repos\GasStation\GasStation.Application\obj\Debug\net8.0\ref\GasStation.Application.dll
 C:\Users\Admin\source\repos\GasStation\GasStation.Application\bin\Debug\net8.0\GasStation.Infrastructure.dll
 C:\Users\Admin\source\repos\GasStation\GasStation.Application\bin\Debug\net8.0\GasStation.Infrastructure.pdb
+C:\Users\Admin\source\repos\GasStation\GasStation.Application\obj\Debug\net8.0\GasStation.Application.sourcelink.json

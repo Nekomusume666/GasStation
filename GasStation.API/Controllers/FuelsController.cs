@@ -19,6 +19,12 @@ namespace GasStation.API.Controllers
         public async Task<IActionResult> GetAll()
         {
             var fuels = await _fuelService.GetAllFuelsAsync();
+
+            if (fuels == null || !fuels.Any())
+            {
+                return NotFound("No fuels found.");
+            }
+
             return Ok(fuels);
         }
 
@@ -26,28 +32,79 @@ namespace GasStation.API.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var fuel = await _fuelService.GetFuelByIdAsync(id);
+
+            if (fuel == null)
+            {
+                return NotFound($"Fuel with ID {id} not found.");
+            }
+
             return Ok(fuel);
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] FuelDto fuelDto)
         {
-            await _fuelService.AddFuelAsync(fuelDto);
-            return CreatedAtAction(nameof(GetById), new { id = fuelDto.ID_Fuel }, fuelDto);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                await _fuelService.AddFuelAsync(fuelDto);
+                return CreatedAtAction(nameof(GetById), new { id = fuelDto.ID_Fuel }, fuelDto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred while creating the fuel: {ex.Message}");
+            }
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] FuelDto fuelDto)
         {
-            await _fuelService.UpdateFuelAsync(id, fuelDto);
-            return NoContent();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var existingFuel = await _fuelService.GetFuelByIdAsync(id);
+
+            if (existingFuel == null)
+            {
+                return NotFound($"Fuel with ID {id} not found.");
+            }
+
+            try
+            {
+                await _fuelService.UpdateFuelAsync(id, fuelDto);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred while updating the fuel: {ex.Message}");
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _fuelService.DeleteFuelAsync(id);
-            return NoContent();
+            var existingFuel = await _fuelService.GetFuelByIdAsync(id);
+
+            if (existingFuel == null)
+            {
+                return NotFound($"Fuel with ID {id} not found.");
+            }
+
+            try
+            {
+                await _fuelService.DeleteFuelAsync(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred while deleting the fuel: {ex.Message}");
+            }
         }
     }
 }

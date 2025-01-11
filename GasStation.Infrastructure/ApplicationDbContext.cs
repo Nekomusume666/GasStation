@@ -10,7 +10,7 @@ namespace GasStation.Infrastructure
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Domain.Models.GasStation> GasStations { get; set; }
         public DbSet<Fuel> Fuels { get; set; }
-        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Transactions> Transactions { get; set; }
         public DbSet<Supply> Supplies { get; set; }
         public DbSet<FuelType> FuelTypes { get; set; }
         public DbSet<Pump> Pumps { get; set; }
@@ -147,12 +147,12 @@ namespace GasStation.Infrastructure
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
-            // Настройка сущности Transaction
-            modelBuilder.Entity<Transaction>(entity =>
+            // Настройка сущности Transactions
+            modelBuilder.Entity<Transactions>(entity =>
             {
-                entity.ToTable("Transaction");
+                entity.ToTable("Transactions");
 
-                entity.HasKey(e => e.ID_Transaction);
+                entity.HasKey(e => e.ID_Transactions);
 
                 entity.Property(e => e.Quantity)
                     .IsRequired();

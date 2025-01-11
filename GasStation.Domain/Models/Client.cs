@@ -15,6 +15,6 @@ namespace GasStation.Domain.Models
         public int? BonusPoints { get; set; } // Nullable
 
         // Связи
-        public ICollection<Transaction>? Transactions { get; set; }
+        public ICollection<Transactions>? Transactions { get; set; }
     }
 }

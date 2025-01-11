@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GasStation.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c68ab472804ee03b6b553b4093fe02477944e56f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GasStation.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GasStation.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

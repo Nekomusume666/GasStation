@@ -13,3 +13,4 @@ C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasSta
 C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\refint\GasStation.Shared.dll
 C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.pdb
 C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\ref\GasStation.Shared.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.Shared\obj\Debug\net8.0\GasStation.Shared.sourcelink.json

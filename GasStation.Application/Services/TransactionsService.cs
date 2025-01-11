@@ -23,7 +23,7 @@ namespace GasStation.Application.Services
                 var transactions = await _context.Transactions
                     .Select(t => new TransactionsDto
                     {
-                        ID_Transactions = t.ID_Transaction,
+                        ID_Transactions = t.ID_Transactions,
                         ID_Client = t.ID_Client,
                         ID_Fuel = t.ID_Fuel,
                         Quantity = t.Quantity,
@@ -54,7 +54,7 @@ namespace GasStation.Application.Services
 
                 var transactionDto = new TransactionsDto
                 {
-                    ID_Transactions = transactionEntity.ID_Transaction,
+                    ID_Transactions = transactionEntity.ID_Transactions,
                     ID_Client = transactionEntity.ID_Client,
                     ID_Fuel = transactionEntity.ID_Fuel,
                     Quantity = transactionEntity.Quantity,
@@ -79,7 +79,7 @@ namespace GasStation.Application.Services
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
-                var transactionEntity = new Transaction
+                var transactionEntity = new Transactions
                 {
                     ID_Client = transactionDto.ID_Client,
                     ID_Fuel = transactionDto.ID_Fuel,

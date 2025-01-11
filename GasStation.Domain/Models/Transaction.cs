@@ -1,8 +1,8 @@
 ﻿namespace GasStation.Domain.Models
 {
-    public class Transaction
+    public class Transactions
     {
-        public int ID_Transaction { get; set; }
+        public int ID_Transactions { get; set; }
         public int Quantity { get; set; }
         public decimal Cost { get; set; }
         public DateTime Date { get; set; }
