@@ -94,3 +94,7 @@ C:\Users\Admin\source\repos\GasStation\GasStation.API\bin\Debug\net8.0\runtimes\
 C:\Users\Admin\source\repos\GasStation\GasStation.API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Admin\source\repos\GasStation\GasStation.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Admin\source\repos\GasStation\GasStation.API\obj\Debug\net8.0\GasStation.API.sourcelink.json
+C:\Users\Admin\source\repos\GasStation\GasStation.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.API\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.API\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\Admin\source\repos\GasStation\GasStation.API\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll

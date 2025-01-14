@@ -41,7 +41,7 @@ namespace GasStation.API.Controllers
             return Ok(client);
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> Create([FromBody] ClientDto clientDto)
         {
             if (!ModelState.IsValid)
@@ -52,13 +52,33 @@ namespace GasStation.API.Controllers
             try
             {
                 await _clientService.AddClientAsync(clientDto);
-                return CreatedAtAction(nameof(GetById), new { id = clientDto.ID_Client }, clientDto);
+                return Ok(new { Message = "User registered successfully" });
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"An error occurred while creating the client: {ex.Message}");
             }
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            if (string.IsNullOrEmpty(loginDto.Login) || string.IsNullOrEmpty(loginDto.Password))
+            {
+                return BadRequest("Login and Password are required.");
+            }
+
+            var client = await _clientService.GetClientByLoginAsync(loginDto.Login);
+
+            if (client == null || client.Password != loginDto.Password) // Здесь можно хэшировать и сравнивать пароли
+            {
+                return Unauthorized("Invalid login or password.");
+            }
+
+            // Можно вернуть токен, если используется аутентификация через JWT
+            return Ok(new { Message = "Login successful!" });
+        }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] ClientDto clientDto)

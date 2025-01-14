@@ -107,6 +107,39 @@ namespace GasStation.Application.Services
             }
         }
 
+        public async Task<ClientDto> GetClientByLoginAsync(string login)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                var client = await _context.Clients.FirstOrDefaultAsync(c => c.Login == login);
+
+                if (client == null) return null;
+
+                var clientDto = new ClientDto
+                {
+                    ID_Client = client.ID_Client,
+                    LastName = client.LastName,
+                    FirstName = client.FirstName,
+                    MiddleName = client.MiddleName,
+                    Phone = client.Phone,
+                    Email = client.Email,
+                    Login = client.Login,
+                    Password = client.Password, // Лучше хранить хэш пароля
+                    BonusPoints = client.BonusPoints
+                };
+
+                await transaction.CommitAsync();
+                return clientDto;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
+
+
         // Обновить существующего клиента
         public async Task UpdateClientAsync(int id, ClientDto clientDto)
         {
