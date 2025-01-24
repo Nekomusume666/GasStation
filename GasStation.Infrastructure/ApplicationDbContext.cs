@@ -142,7 +142,7 @@ namespace GasStation.Infrastructure
                     .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(e => e.FuelType)
-                    .WithMany()
+                    .WithMany(g => g.Fuels)
                     .HasForeignKey(e => e.ID_FuelType)
                     .OnDelete(DeleteBehavior.Restrict);
             });

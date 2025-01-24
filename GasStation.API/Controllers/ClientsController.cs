@@ -76,7 +76,7 @@ namespace GasStation.API.Controllers
             }
 
             // Можно вернуть токен, если используется аутентификация через JWT
-            return Ok(new { Message = "Login successful!" });
+            return Ok(client);
         }
 
 

@@ -87,6 +87,20 @@ namespace GasStation.API.Controllers
             }
         }
 
+        [HttpGet("client/{clientId}")]
+        public async Task<IActionResult> GetTransactionsByClientId(int clientId)
+        {
+            var transactions = await _transactionService.GetTransactionsByClientIdAsync(clientId);
+
+            if (transactions == null || !transactions.Any())
+            {
+                return NotFound($"No transactions found for client with ID {clientId}.");
+            }
+
+            return Ok(transactions);
+        }
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

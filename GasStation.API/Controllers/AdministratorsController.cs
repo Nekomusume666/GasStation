@@ -1,5 +1,6 @@
 ﻿using GasStation.Application.DTOs;
 using GasStation.Application.Interfaces;
+using GasStation.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GasStation.API.Controllers
@@ -59,6 +60,25 @@ namespace GasStation.API.Controllers
                 // Логирование ошибки, если необходимо
                 return StatusCode(500, $"An error occurred while creating the administrator: {ex.Message}");
             }
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            if (string.IsNullOrEmpty(loginDto.Login) || string.IsNullOrEmpty(loginDto.Password))
+            {
+                return BadRequest("Login and Password are required.");
+            }
+
+            var administrator = await _administratorService.GetAdministratorByLoginAsync(loginDto.Login);
+
+            if (administrator == null || administrator.Password != loginDto.Password) // Здесь можно хэшировать и сравнивать пароли
+            {
+                return Unauthorized("Invalid login or password.");
+            }
+
+            // Можно вернуть токен, если используется аутентификация через JWT
+            return Ok(administrator);
         }
 
         [HttpPut("{id}")]

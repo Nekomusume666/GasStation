@@ -44,6 +44,34 @@ namespace GasStation.Application.Services
             }
         }
 
+        public async Task<IEnumerable<TransactionsDto>> GetTransactionsByClientIdAsync(int clientId)
+        {
+            try
+            {
+                var transactions = await _context.Transactions
+                    .Where(t => t.ID_Client == clientId)
+                    .Select(t => new TransactionsDto
+                    {
+                        ID_Transactions = t.ID_Transactions,
+                        ID_Client = t.ID_Client,
+                        ID_Fuel = t.ID_Fuel,
+                        Quantity = t.Quantity,
+                        Cost = t.Cost,
+                        Date = t.Date,
+                        BonusPoints = t.BonusPoints,
+                        ID_Pump = t.ID_Pump
+                    })
+                    .ToListAsync();
+
+                return transactions;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error fetching transactions for client with ID {clientId}: {ex.Message}");
+            }
+        }
+
+
         public async Task<TransactionsDto> GetTransactionByIdAsync(int id)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();

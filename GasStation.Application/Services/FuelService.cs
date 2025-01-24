@@ -116,6 +116,54 @@ namespace GasStation.Application.Services
             }
         }
 
+        public async Task UpdateFuelQuantityAsync(int gasStationId, int fuelTypeId, int newQuantity)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                var fuel = await _context.Fuels
+                    .FirstOrDefaultAsync(f => f.ID_FuelType == fuelTypeId && f.ID_GasStation == gasStationId);
+
+                if (fuel == null)
+                {
+                    throw new KeyNotFoundException($"Fuel with type ID {fuelTypeId} not found for gas station ID {gasStationId}.");
+                }
+
+                fuel.Quantity = newQuantity;
+
+                _context.Fuels.Update(fuel);
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
+
+
+        public async Task<FuelDto> GetFuelByTypeAndStationAsync(int fuelTypeId, int gasStationId)
+        {
+            var fuel = await _context.Fuels
+                .FirstOrDefaultAsync(f => f.ID_Fuel == fuelTypeId && f.ID_GasStation == gasStationId);
+
+            if (fuel == null)
+            {
+                return null;
+            }
+
+            return new FuelDto
+            {
+                ID_Fuel = fuel.ID_Fuel,
+                PricePerLiter = fuel.PricePerLiter,
+                Quantity = fuel.Quantity,
+                ID_GasStation = fuel.ID_GasStation,
+                ID_FuelType = fuel.ID_FuelType
+            };
+        }
+
+
         public async Task DeleteFuelAsync(int id)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();

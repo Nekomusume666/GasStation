@@ -5,6 +5,7 @@ namespace GasStation.Application.Interfaces
     public interface IFuelService
     {
         Task<IEnumerable<FuelDto>> GetAllFuelsAsync();
+        Task<FuelDto> GetFuelByTypeAndStationAsync(int fuelTypeId, int gasStationId);
         Task<FuelDto> GetFuelByIdAsync(int id);
         Task AddFuelAsync(FuelDto fuelDto);
         Task UpdateFuelAsync(int id, FuelDto fuelDto);

@@ -5,6 +5,7 @@ namespace GasStation.Application.Interfaces
     public interface IAdministratorService
     {
         Task<IEnumerable<AdministratorDto>> GetAllAdministratorsAsync();
+        Task<AdministratorDto> GetAdministratorByLoginAsync(string login);
         Task<AdministratorDto> GetAdministratorByIdAsync(int id);
         Task AddAdministratorAsync(AdministratorDto administratorDto);
         Task UpdateAdministratorAsync(int id, AdministratorDto administratorDto);

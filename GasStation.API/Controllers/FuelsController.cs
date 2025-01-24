@@ -86,6 +86,30 @@ namespace GasStation.API.Controllers
             }
         }
 
+        [HttpPut("updateQuantity")]
+        public async Task<IActionResult> UpdateQuantity([FromQuery] int gasStationId, [FromQuery] int fuelTypeId, [FromQuery] int newQuantity)
+        {
+            try
+            {
+                var fuel = await _fuelService.GetFuelByTypeAndStationAsync(fuelTypeId, gasStationId);
+
+                if (fuel == null)
+                {
+                    return NotFound($"Fuel with type ID {fuelTypeId} not found for gas station ID {gasStationId}.");
+                }
+
+                fuel.Quantity = newQuantity;
+
+                await _fuelService.UpdateFuelAsync(fuel.ID_Fuel, fuel);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred while updating the fuel quantity: {ex.Message}");
+            }
+        }
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

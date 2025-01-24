@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GasStation.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b04b63c8ef30cc43f076850ca7c2112b717949d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78432c3586614b1705ceafd446c251c6ef6b38cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("GasStation.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GasStation.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

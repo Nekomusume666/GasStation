@@ -132,6 +132,37 @@ namespace GasStation.Application.Services
             }
         }
 
+        public async Task<AdministratorDto> GetAdministratorByLoginAsync(string login)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                var administrator = await _context.Administrators.FirstOrDefaultAsync(c => c.Login == login);
+
+                if (administrator == null) return null;
+
+                var administratorDto = new AdministratorDto
+                {
+                    ID_Administrator = administrator.ID_Administrator,
+                    LastName = administrator.LastName,
+                    FirstName = administrator.FirstName,
+                    MiddleName = administrator.MiddleName,
+                    Phone = administrator.Phone,
+                    Email = administrator.Email,
+                    Login = administrator.Login,
+                    Password = administrator.Password
+                };
+
+                await transaction.CommitAsync();
+                return administratorDto;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
+
         // Удалить администратора
         public async Task DeleteAdministratorAsync(int id)
         {
